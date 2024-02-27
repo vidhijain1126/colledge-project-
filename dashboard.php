@@ -394,14 +394,11 @@
     });
 });
 
-<script>
   function validateNumber(input) {
     var numericValue = parseFloat(input.value);
-
-    // Check if it's a non-negative number
     if (isNaN(numericValue) || numericValue < 0) {
       alert("Please enter a valid non-negative number.");
-      input.value = ''; // Clear the input field
+      input.value = ''; 
     }
   }
 
@@ -409,19 +406,16 @@
     var numericField = document.getElementById("fees").value;
     var textField = document.getElementById("name").value;
 
-    // Convert the numeric value to a number
     var numericValue = parseFloat(numericField);
 
-    // Check if it's a non-negative number
     if (isNaN(numericValue) || numericValue < 0) {
       alert("Please enter a valid non-negative number.");
-      event.preventDefault(); // Prevent form submission
+      event.preventDefault(); 
     }
 
-    // Additional validation for the text field (you can customize this part)
     if (textField.trim() === '') {
       alert("Please enter some text.");
-      event.preventDefault(); // Prevent form submission
+      event.preventDefault();
     }
   });
     </script>
@@ -488,30 +482,30 @@
         </div>
     </div>
 
-    // <div id="coachForm" class="modal">
-    //     <div class="modal-content">
-    //         <span class="close" onclick="closeCoachForm()">&times;</span>
-    //         <form action="coach_form.php" method="post">
-    //             <label for="tname1">Name:</label>
-    //             <input type="text" id="tname1" name="tname" required>
-    //             <label for="sport">Sports:</label>
-    //             <select id="sport" name="sports" required>
-    //                 <option value="default">Select Sports</option>
-    //                 <option value="Basketball">Basketball</option>
-    //                 <option value="Cricket">Cricket</option>
-    //                 <option value="Running">Running</option>
-    //                 <option value="Badminton">Badminton</option>
-    //                 <option value="Karate">Karate</option>
-    //             </select>
-    //             <label for="mail">Mail:</label> <input type="email" id="email" name="email" required>
-    //             <label for="phone_no">Phone No.:</label> <input type="tel" id="tphone" name="tphone" required>
-    //             <label for="exprience">Exprience:</label> <input type="number" id="experience" name="experience"
-    //                 required>
-    //             <label for="address">Address:</label><textarea id="taddress" name="taddress" required></textarea>
-    //             <input type="submit" name="submit" value="Submit">
-    //         </form>
-    //     </div>
-    // </div>
+    <div id="coachForm" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCoachForm()">&times;</span>
+            <form action="coach_form.php" method="post">
+                <label for="tname1">Name:</label>
+                <input type="text" id="tname1" name="tname" required>
+                <label for="sport">Sports:</label>
+                <select id="sport" name="sports" required>
+                    <option value="default">Select Sports</option>
+                    <option value="Basketball">Basketball</option>
+                    <option value="Cricket">Cricket</option>
+                    <option value="Running">Running</option>
+                    <option value="Badminton">Badminton</option>
+                    <option value="Karate">Karate</option>
+                </select>
+                <label for="mail">Mail:</label> <input type="email" id="email" name="email" required>
+                <label for="phone_no">Phone No.:</label> <input type="tel" id="tphone" name="tphone" required>
+                <label for="exprience">Exprience:</label> <input type="number" id="experience" name="experience"
+                    required>
+                <label for="address">Address:</label><textarea id="taddress" name="taddress" required></textarea>
+                <input type="submit" name="submit" value="Submit">
+            </form>
+        </div>
+    </div>
 
     <div id="studentForm" class="modal">
         <div class="modal-content">
